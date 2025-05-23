@@ -1,0 +1,15 @@
+La automatización del flujo de compra en la tienda de demostración OpenCart permite validar de forma confiable
+y repetible uno de los procesos críticos del negocio: el checkout de productos.
+A través de la implementación de una prueba funcional E2E con Serenity BDD y el patrón Screenplay, se logró:
+
+Simular la experiencia completa de un usuario invitado, desde la búsqueda y adición de productos al carrito hasta la confirmación final de la orden.
+
+Validar mensajes clave del proceso, como la confirmación “Your order has been placed!”, asegurando la finalización exitosa de la compra.
+
+Estandarizar el ingreso de datos con modelos y lectura desde archivos CSV, facilitando la escalabilidad y reutilización de pruebas.
+
+Implementar buenas prácticas de automatización, como separación de responsabilidades, esperas controladas y reutilización de tareas y preguntas.
+
+Esta automatización no solo agiliza la validación del flujo principal de negocio, sino que también sirve como base para construir pruebas más complejas,
+incluyendo flujos con usuarios registrados, promociones, errores esperados, y pruebas de regresión.
+Su integración en pipelines de CI/CD fortalecería aún más la calidad del software entregado.
