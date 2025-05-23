@@ -1,4 +1,4 @@
-group 'co.com.opencart'
+group 'co.com.petstore'
 version '1.0-SNAPSHOT'
 buildscript {
     repositories {
@@ -48,7 +48,7 @@ dependencies {
     implementation group: 'net.serenity-bdd', name: 'serenity-cucumber',             version: serenityVersion
     implementation group: 'net.serenity-bdd', name: 'serenity-reports',              version: serenityVersion
     implementation group: 'net.serenity-bdd', name: 'serenity-screenplay-webdriver', version: serenityVersion
-
+    testImplementation group: 'com.intuit.karate', name: 'karate-junit5', version: '1.4.1'
     implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind',            version: '2.11.3'
     implementation group: 'com.fasterxml.jackson.datatype', name: 'jackson-datatype-jsr310', version: '2.11.3'
     implementation 'com.fasterxml.jackson.dataformat:jackson-dataformat-xml:2.14.0'
