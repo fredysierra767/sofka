@@ -1,0 +1,3 @@
+id;idFiltro;nombre;apellido;email;numeroTelefono;nombreEmpresa;direccionUno;direccionDos;nombreCiudad;codigoPostal;nombrePais;nombreDepartamento;comentario
+1;invitado;juan;perez;juan@gmail.com;1236598596;pichincha;cra 12;nro 9a ;Bogota D.C;110111;Colombia;Bolivar;esto es una prueba
+2;registrado;juan;perez;juan@gmail.com;1236598596;pichincha;cra 12;nro 9a ;Bogota D.C;110111;Colombia;Bolivar;esto es una prueba

@@ -1,0 +1,347 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="bootstrap-icons/font/bootstrap-icons.css"><!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.11.3/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.11.3/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.11.3/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/>
+<!--CHART.JS-->
+<script src="chartjs/chart.js"></script>
+<script src="chartjs/chartjs-plugin-datalabels@2.0.0"></script>
+<script src="chartjs/patternomaly.min.js"></script>
+<script>
+    // Register the plugin to all charts:
+    Chart.register(ChartDataLabels);
+</script>
+<!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">OpenCart E2E</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="af58aa451f35874e501c966543754f0542903cae13448ff066d91925b4b3e897.html">Flujo De Compra En Opencart</a></span>
+                > <span class="truncate-60"><a
+                    href="aa7260b26063fd15ae4a057e96ca729386431decc1b4edb822d0a70cc0a5800f.html">Compra como invitado </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="bi bi-journal-check"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="bi bi-journal-text"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="7ea0a5e2d679b9deeda9910ae4a9bcd3a281e0d908303a9e16e486103e98880c.html"><i class="bi bi-chat-text"></i> Capabilities</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 23-05-2025 13:45</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fs-2 bi bi-chat-left-quote large-icon"></i>
+                                    <span class="story-header-title">Flujo De Compra En Opencart </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="dcf6596c2c2c37de06c10cd8d7f037b9e9dbed3b10f6b45c561d2905ec371264.html">Flujo01
+                                    (tag)</a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Compra como invitado
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+    <div class="story-title">
+        <h3>Scenario:</h3>
+        <div class="scenario">Dado que el usuario abre la página de inicio<br>Cuando agrega los productos "&lt;producto1&gt;" y "&lt;producto2&gt;" al carrito<br>Y visualiza el carrito de compras<br>Y completa el checkout como "invitado" con los datos correctos<br>Entonces debería ver el mensaje "Your order has been placed!"</div>
+    </div>
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="96327a9ea257ae0fb0f060bba29ce18cb83717333c26260b3c6bfb9dc34d3619.png" title=" 1: Compra como invitado ({producto1=iMac, producto2=HTC Touch HD})" width="1920"/>
+                <img src="96327a9ea257ae0fb0f060bba29ce18cb83717333c26260b3c6bfb9dc34d3619.png" title=" Dado que el usuario abre la p&aacute;gina de inicio" width="1920"/>
+                <img src="96327a9ea257ae0fb0f060bba29ce18cb83717333c26260b3c6bfb9dc34d3619.png" title=" usuario opens the browser at http://opencart.abstracta.us/" width="1920"/>
+                <img src="aec36df6b008bd7dc96bc8da2e62f1f59b81c49e9ab18b67154e7090a0cd031f.png" title=" usuario opens the browser at http://opencart.abstracta.us/ (completed)" width="1920"/>
+                <img src="aec36df6b008bd7dc96bc8da2e62f1f59b81c49e9ab18b67154e7090a0cd031f.png" title=" Dado que el usuario abre la p&aacute;gina de inicio (completed)" width="1920"/>
+                <img src="aec36df6b008bd7dc96bc8da2e62f1f59b81c49e9ab18b67154e7090a0cd031f.png" title=" Cuando agrega los productos &quot;iMac&quot; y &quot;HTC Touch HD&quot; al carrito" width="1920"/>
+                <img src="aec36df6b008bd7dc96bc8da2e62f1f59b81c49e9ab18b67154e7090a0cd031f.png" title=" Usuario buscar productos" width="1920"/>
+                <img src="aec36df6b008bd7dc96bc8da2e62f1f59b81c49e9ab18b67154e7090a0cd031f.png" title=" usuario clicks on Buscador principal de OpenCart" width="1920"/>
+                <img src="77710af2cd2cf39f23f05e23172df1db2e64581b21b49d2fcbdd222bf8ddf202.png" title=" usuario clicks on Buscador principal de OpenCart" width="1920"/>
+                <img src="7f33ce3f7d6cd1d68b6641450844879b35b2cdc8fd6456876a3f1a2a1f618974.png" title=" usuario clicks on Buscador principal de OpenCart (completed)" width="1920"/>
+                <img src="7f33ce3f7d6cd1d68b6641450844879b35b2cdc8fd6456876a3f1a2a1f618974.png" title=" usuario enters 'iMac' into Buscador principal de OpenCart" width="1920"/>
+                <img src="832b75975211a95157971f4e557f1038bdcec560c1aa35b9381c243c52d6eb48.png" title=" usuario enters 'iMac' into Buscador principal de OpenCart (completed)" width="1920"/>
+                <img src="832b75975211a95157971f4e557f1038bdcec560c1aa35b9381c243c52d6eb48.png" title=" usuario clicks on Boton para buscar productos" width="1920"/>
+                <img src="c7c4f5a81c3b85b6d810d9321badee9c81a5b14e8aed75897f3e9e5ab3084f9c.png" title=" usuario clicks on Boton para buscar productos (completed)" width="1920"/>
+                <img src="c7c4f5a81c3b85b6d810d9321badee9c81a5b14e8aed75897f3e9e5ab3084f9c.png" title=" usuario clicks on Boton adicionar al carrito, en cualquier lugar" width="1920"/>
+                <img src="5952b93a8b604f7994dabab77ba62008f31312abdf53d83f1e9bfa7765b0dd6e.png" title=" usuario clicks on Boton adicionar al carrito, en cualquier lugar (completed)" width="1920"/>
+                <img src="f35b671b6f6013baaaae8ca302f18ed1790e7ab5c0b4ff91ae59d121389bc620.png" title=" Usuario buscar productos (completed)" width="1920"/>
+                <img src="f35b671b6f6013baaaae8ca302f18ed1790e7ab5c0b4ff91ae59d121389bc620.png" title=" Usuario buscar productos" width="1920"/>
+                <img src="be7bfcadb68ea147cbd2196f025595c3a1f85f9e3171cdd06a8ee66835730e85.png" title=" usuario clicks on Buscador principal de OpenCart" width="1920"/>
+                <img src="21bc749e214ae27a4273817f4efe3feefb463856e8bca828786a2fb70a89d1a9.png" title=" usuario clicks on Buscador principal de OpenCart" width="1920"/>
+                <img src="787af458fd5cdf9759d6e0f2d800f44843e4d0dfe4fe8a0e730a3b0f1aab17a4.png" title=" usuario clicks on Buscador principal de OpenCart (completed)" width="1920"/>
+                <img src="787af458fd5cdf9759d6e0f2d800f44843e4d0dfe4fe8a0e730a3b0f1aab17a4.png" title=" usuario enters 'HTC Touch HD' into Buscador principal de OpenCart" width="1920"/>
+                <img src="cbac5b13c3a781df0f0aec7a3a4b84272e7899d72824e6354e64bdb2da561e05.png" title=" usuario enters 'HTC Touch HD' into Buscador principal de OpenCart" width="1920"/>
+                <img src="824a4f2c30b0e47a8434a117997cf1c22dccc492f1f1c898a0b319bf79fd47f4.png" title=" usuario enters 'HTC Touch HD' into Buscador principal de OpenCart (completed)" width="1920"/>
+                <img src="824a4f2c30b0e47a8434a117997cf1c22dccc492f1f1c898a0b319bf79fd47f4.png" title=" usuario clicks on Boton para buscar productos" width="1920"/>
+                <img src="27e4287e4241095dac393b16e98af698f2825178afff1a57b55934c6183c19b2.png" title=" usuario clicks on Boton para buscar productos (completed)" width="1920"/>
+                <img src="27e4287e4241095dac393b16e98af698f2825178afff1a57b55934c6183c19b2.png" title=" usuario clicks on Boton adicionar al carrito, en cualquier lugar" width="1920"/>
+                <img src="d421ed629b78a48d5862fc2389ed1ce2e02056a66da90ca5fa68e80bbf1c343c.png" title=" usuario clicks on Boton adicionar al carrito, en cualquier lugar (completed)" width="1920"/>
+                <img src="1a81808fd9b669dc6c9525c8b8d7c2f35611498c7cea1a20d550637c0129111b.png" title=" Usuario buscar productos (completed)" width="1920"/>
+                <img src="1a81808fd9b669dc6c9525c8b8d7c2f35611498c7cea1a20d550637c0129111b.png" title=" Cuando agrega los productos &quot;iMac&quot; y &quot;HTC Touch HD&quot; al carrito (completed)" width="1920"/>
+                <img src="1a81808fd9b669dc6c9525c8b8d7c2f35611498c7cea1a20d550637c0129111b.png" title=" Y visualiza el carrito de compras" width="1920"/>
+                <img src="d93a2a99a94718bde5c88d17ebdb484adbffd30dbbb0bd9faac6bbe30b227802.png" title=" Usuario visualizar carrito de compras" width="1920"/>
+                <img src="3b80616ef5b49af3bb384a505b92466cdd431714f93b1731739e2f3de5359746.png" title=" Usuario esperar" width="1920"/>
+                <img src="3b80616ef5b49af3bb384a505b92466cdd431714f93b1731739e2f3de5359746.png" title=" usuario clicks on Boton para visualizar el carrito" width="1920"/>
+                <img src="990766812f950e1320cca381b4a342e890c2c4f6e4adfe908a16289613307cbf.png" title=" usuario clicks on Boton para visualizar el carrito (completed)" width="1920"/>
+                <img src="990766812f950e1320cca381b4a342e890c2c4f6e4adfe908a16289613307cbf.png" title=" Usuario esperar" width="1920"/>
+                <img src="990766812f950e1320cca381b4a342e890c2c4f6e4adfe908a16289613307cbf.png" title=" usuario clicks on Boton para ingresar el carrito" width="1920"/>
+                <img src="3e45e7697c0de23416d3f66d7d529a8a8e43af264b21377125bcd25fa7e9bd8e.png" title=" usuario clicks on Boton para ingresar el carrito (completed)" width="1920"/>
+                <img src="3e45e7697c0de23416d3f66d7d529a8a8e43af264b21377125bcd25fa7e9bd8e.png" title=" Usuario visualizar carrito de compras (completed)" width="1920"/>
+                <img src="3e45e7697c0de23416d3f66d7d529a8a8e43af264b21377125bcd25fa7e9bd8e.png" title=" Y visualiza el carrito de compras (completed)" width="1920"/>
+                <img src="3e45e7697c0de23416d3f66d7d529a8a8e43af264b21377125bcd25fa7e9bd8e.png" title=" Y completa el checkout como &quot;invitado&quot; con los datos correctos" width="1920"/>
+                <img src="3e45e7697c0de23416d3f66d7d529a8a8e43af264b21377125bcd25fa7e9bd8e.png" title=" Usuario ingresar informacion de compra" width="1920"/>
+                <img src="3e45e7697c0de23416d3f66d7d529a8a8e43af264b21377125bcd25fa7e9bd8e.png" title=" Usuario esperar" width="1920"/>
+                <img src="e9cb75cfa83d21b7cda295e0d699a84556c7b3e643186100f02b0b2914019bdf.png" title=" usuario clicks on Boton Checkout y continuar la compra" width="1920"/>
+                <img src="fccedc7a6e5023b61f5dd937c69b5b6d98f7ca93a69e9be2f9068ec978be90ed.png" title=" usuario clicks on Boton Checkout y continuar la compra" width="1920"/>
+                <img src="d3726b114a72d50a6f103c9a20eea304698d8a5db6910b17df154c83ec1f4d67.png" title=" usuario clicks on Boton Checkout y continuar la compra (completed)" width="1920"/>
+                <img src="d3726b114a72d50a6f103c9a20eea304698d8a5db6910b17df154c83ec1f4d67.png" title=" usuario clicks on Radio boton seleccionar invitado" width="1920"/>
+                <img src="25d8ccec3e8a00b25f88766aacc912d58e63c1d4b5ada3acc705779e07552e4e.png" title=" usuario clicks on Radio boton seleccionar invitado (completed)" width="1920"/>
+                <img src="25d8ccec3e8a00b25f88766aacc912d58e63c1d4b5ada3acc705779e07552e4e.png" title=" usuario clicks on Boton continuar indicando tipo cliente" width="1920"/>
+                <img src="125567a41489c35e3ff0d3f3f64aca2ff32b6dc051239f5d3c0be5d2f8bcf2b9.png" title=" usuario clicks on Boton continuar indicando tipo cliente" width="1920"/>
+                <img src="c4762199504b9dba7ee6ccb5f7564a8c65d486a169e1b34b38c1945099ac2738.png" title=" usuario clicks on Boton continuar indicando tipo cliente (completed)" width="1920"/>
+                <img src="93639c3a09fb199f92804dd76071823f0e3bf0e476d966a9c383eddad93b223d.png" title=" Usuario esperar" width="1920"/>
+                <img src="93639c3a09fb199f92804dd76071823f0e3bf0e476d966a9c383eddad93b223d.png" title=" usuario enters 'juan' into Imput nombre" width="1920"/>
+                <img src="ce53f797bddf5857d7668d7d309a9046fabbd1ef45be8e45164930af2ea1b24f.png" title=" usuario enters 'juan' into Imput nombre" width="1920"/>
+                <img src="21b84888310f830976413f214f0afc87db0287c946e27d20fbf29f14d87764cd.png" title=" usuario enters 'juan' into Imput nombre (completed)" width="1920"/>
+                <img src="21b84888310f830976413f214f0afc87db0287c946e27d20fbf29f14d87764cd.png" title=" usuario enters 'perez' into Imput apellido" width="1920"/>
+                <img src="a00f710d520e51ae1233caf9307e51be7a40e82b1dc57dc5cf531896cb0c172a.png" title=" usuario enters 'perez' into Imput apellido" width="1920"/>
+                <img src="7a5c30bfd10e371bc252e181116ad8f2d9af15e17feb1906e9284197ef49b747.png" title=" usuario enters 'perez' into Imput apellido (completed)" width="1920"/>
+                <img src="7a5c30bfd10e371bc252e181116ad8f2d9af15e17feb1906e9284197ef49b747.png" title=" usuario enters 'juan@gmail.com' into Imput email" width="1920"/>
+                <img src="85e66d88b0a4adaed088ffbe6600468c6b6b8609922c49a1e6dd614a94987a7d.png" title=" usuario enters 'juan@gmail.com' into Imput email" width="1920"/>
+                <img src="9658b8096429007e2afe5e5260612fd5b739683e36a751a1d0efbdd8aeb81c7c.png" title=" usuario enters 'juan@gmail.com' into Imput email (completed)" width="1920"/>
+                <img src="9658b8096429007e2afe5e5260612fd5b739683e36a751a1d0efbdd8aeb81c7c.png" title=" usuario enters '1236598596' into Imput telefono" width="1920"/>
+                <img src="c31a776977093d0939d82a2bd50f00af0dc9a525602db487efe8adeaef3babe1.png" title=" usuario enters '1236598596' into Imput telefono" width="1920"/>
+                <img src="e839dafec47aff69cd34d2a8ddea2af7c7b864aae59bdccc86fbce48eeedd3b6.png" title=" usuario enters '1236598596' into Imput telefono (completed)" width="1920"/>
+                <img src="e839dafec47aff69cd34d2a8ddea2af7c7b864aae59bdccc86fbce48eeedd3b6.png" title=" usuario enters 'pichincha' into Imput empresa" width="1920"/>
+                <img src="dad2ad37d39414cd275f2f41f3c717ebf706cf2f7ff7fe8dde46eb87ba1f5d7e.png" title=" usuario enters 'pichincha' into Imput empresa" width="1920"/>
+                <img src="dd2db2bcc11a2b67c3303cb9567ceb0f480bafa3b827577902864e2774d4b143.png" title=" usuario enters 'pichincha' into Imput empresa (completed)" width="1920"/>
+                <img src="dd2db2bcc11a2b67c3303cb9567ceb0f480bafa3b827577902864e2774d4b143.png" title=" usuario enters 'cra 12' into Imput direccion uno" width="1920"/>
+                <img src="bf04cc8d82a12b3592d26515ebf0b22c36c761522e5e123785c33f5dee819ddf.png" title=" usuario enters 'cra 12' into Imput direccion uno" width="1920"/>
+                <img src="9d5c6698ee69bb1ee5a65a2cb4dcf3246378b5ca968994fa916347a722a5db0e.png" title=" usuario enters 'cra 12' into Imput direccion uno (completed)" width="1920"/>
+                <img src="9d5c6698ee69bb1ee5a65a2cb4dcf3246378b5ca968994fa916347a722a5db0e.png" title=" usuario enters 'nro 9a' into Imput direccion dos" width="1920"/>
+                <img src="c3f4b255b2db1419bc055065000c2ffa531b72512f6639934fa21ffcdf706c25.png" title=" usuario enters 'nro 9a' into Imput direccion dos" width="1920"/>
+                <img src="63d13c5ffd189a999f86f1fcd066ddf238ccfa66d66a3a5150d6aa1858173869.png" title=" usuario enters 'nro 9a' into Imput direccion dos (completed)" width="1920"/>
+                <img src="63d13c5ffd189a999f86f1fcd066ddf238ccfa66d66a3a5150d6aa1858173869.png" title=" usuario enters 'Bogota D.C' into Imput ciudad" width="1920"/>
+                <img src="ac01fa1c3932f81a2f1272674b5e18a9ff01ea043cefa3fff786efac643fb6b4.png" title=" usuario enters 'Bogota D.C' into Imput ciudad" width="1920"/>
+                <img src="dba293703ca51af00f725b87e04ce4672bf94a3d425d903154e796cfb083e596.png" title=" usuario enters 'Bogota D.C' into Imput ciudad (completed)" width="1920"/>
+                <img src="dba293703ca51af00f725b87e04ce4672bf94a3d425d903154e796cfb083e596.png" title=" usuario enters '110111' into Imput codigo postal" width="1920"/>
+                <img src="f76189d4efdf400f3983ea7c69f5364b9e1c2d3ab7cacfa9ab600f1ec43e00bc.png" title=" usuario enters '110111' into Imput codigo postal" width="1920"/>
+                <img src="4f1cc3b6322dcc9c432cd5b25a084994304a2934c12cdac556ce9dc0da4df190.png" title=" usuario enters '110111' into Imput codigo postal (completed)" width="1920"/>
+                <img src="4f1cc3b6322dcc9c432cd5b25a084994304a2934c12cdac556ce9dc0da4df190.png" title=" Usuario esperar" width="1920"/>
+                <img src="02c63b4cb917d6dd00afb53b3af92917a4d7b239a4d1d20207a2417d1c9a022d.png" title=" Usuario esperar (completed)" width="1920"/>
+                <img src="02c63b4cb917d6dd00afb53b3af92917a4d7b239a4d1d20207a2417d1c9a022d.png" title=" usuario selects Colombia on Imput pais" width="1920"/>
+                <img src="486ba90bba218dbe826e22e518848d3983e5652040591a1945902ed22bff93d9.png" title=" usuario selects Colombia on Imput pais" width="1920"/>
+                <img src="00157a7bb401ad17131ee52032fa751820242d98dbb04138d0cd1a09db538236.png" title=" usuario selects Colombia on Imput pais (completed)" width="1920"/>
+                <img src="00157a7bb401ad17131ee52032fa751820242d98dbb04138d0cd1a09db538236.png" title=" Usuario esperar" width="1920"/>
+                <img src="8c8a79646b93700575c7af5607c3cc49e206aa3359e5703c1e918be024418a67.png" title=" Usuario esperar (completed)" width="1920"/>
+                <img src="53d71f23b716bb10d0e9fa6691db865abca7a4ad5362deb4f56d48bd4947dbb6.png" title=" usuario selects Bolivar on Imput departamento" width="1920"/>
+                <img src="822830ab6353e7b969f077174a769fd16196d9f5b37ceaef61b4f2d37a006e5f.png" title=" usuario selects Bolivar on Imput departamento" width="1920"/>
+                <img src="b97008a3f4d03d8f6415375ae2b310acc60f104a0014af8d33f6d488ed51007b.png" title=" usuario selects Bolivar on Imput departamento (completed)" width="1920"/>
+                <img src="b97008a3f4d03d8f6415375ae2b310acc60f104a0014af8d33f6d488ed51007b.png" title=" usuario clicks on Boton continuar paso 2" width="1920"/>
+                <img src="a7b1cf7c980214525d0cd472ce49e9edfb9ea554917895eb001ff173944ee9b6.png" title=" usuario clicks on Boton continuar paso 2" width="1920"/>
+                <img src="15f64dc986f8201d4a4a0144e5c717384ba61a99a7f446d1e36ef194d1e8ff9f.png" title=" usuario clicks on Boton continuar paso 2 (completed)" width="1920"/>
+                <img src="6932c7cf525f5ac17cf10bbfcdc5dd402f03197015ea8d3501f750b9b7f7b5ff.png" title=" Usuario esperar" width="1920"/>
+                <img src="6932c7cf525f5ac17cf10bbfcdc5dd402f03197015ea8d3501f750b9b7f7b5ff.png" title=" usuario enters 'esto es una prueba' into Imput comentarios" width="1920"/>
+                <img src="db135f2caeaf5ea3fe85854ce4d182ee1d5602dbf3c26edc0f63050f380400a3.png" title=" usuario enters 'esto es una prueba' into Imput comentarios" width="1920"/>
+                <img src="7d01c427d6a2b3c025576fce0570380b6d094f2bbe9ead4c4b38a045a8ad24e3.png" title=" usuario enters 'esto es una prueba' into Imput comentarios (completed)" width="1920"/>
+                <img src="7d01c427d6a2b3c025576fce0570380b6d094f2bbe9ead4c4b38a045a8ad24e3.png" title=" usuario clicks on Boton continuar la compra" width="1920"/>
+                <img src="e0c35ea038f1145ef02a353676847e9a32304459c8fa7565aec247ca5b278393.png" title=" usuario clicks on Boton continuar la compra" width="1920"/>
+                <img src="5c3d56cac0a26e5d593bd786faee18da048cc49d9bfafed18f392157c2567767.png" title=" usuario clicks on Boton continuar la compra (completed)" width="1920"/>
+                <img src="5c3d56cac0a26e5d593bd786faee18da048cc49d9bfafed18f392157c2567767.png" title=" Usuario esperar" width="1920"/>
+                <img src="80fc4d307c6a9a89350c5e8cb15dcd0b759a01b6aa48f071e28137e8f62f5919.png" title=" Usuario esperar (completed)" width="1920"/>
+                <img src="80fc4d307c6a9a89350c5e8cb15dcd0b759a01b6aa48f071e28137e8f62f5919.png" title=" usuario clicks on Terminos y condicones" width="1920"/>
+                <img src="cb62c44e618e7a0f916fb037cbca58f3ada9b3e1c4bc704aa6e4ab65efa1acfc.png" title=" usuario clicks on Terminos y condicones (completed)" width="1920"/>
+                <img src="cb62c44e618e7a0f916fb037cbca58f3ada9b3e1c4bc704aa6e4ab65efa1acfc.png" title=" usuario clicks on Boton continuar la compra paso 5" width="1920"/>
+                <img src="ec22740015670bb67506330503e65a42f02af60a4c7c63d113b218a7483c7b1f.png" title=" usuario clicks on Boton continuar la compra paso 5 (completed)" width="1920"/>
+                <img src="ec22740015670bb67506330503e65a42f02af60a4c7c63d113b218a7483c7b1f.png" title=" usuario clicks on Boton continuar la compra paso 6" width="1920"/>
+                <img src="e683f9546b8122ca48a2ba72026995d91bd9694ef71b11ed16a4922a91e70bb5.png" title=" usuario clicks on Boton continuar la compra paso 6 (completed)" width="1920"/>
+                <img src="e683f9546b8122ca48a2ba72026995d91bd9694ef71b11ed16a4922a91e70bb5.png" title=" Usuario ingresar informacion de compra (completed)" width="1920"/>
+                <img src="e683f9546b8122ca48a2ba72026995d91bd9694ef71b11ed16a4922a91e70bb5.png" title=" Y completa el checkout como &quot;invitado&quot; con los datos correctos (completed)" width="1920"/>
+                <img src="e683f9546b8122ca48a2ba72026995d91bd9694ef71b11ed16a4922a91e70bb5.png" title=" Entonces deber&iacute;a ver el mensaje &quot;Your order has been placed!&quot;" width="1920"/>
+                <img src="4bf13b41b0ab702861902627fa20210e8333e1c4471e3fbe4a9a22b1abd16a18.png" title=" Then El mensaje mostrado en pantalla should be 'Your order has been placed!'" width="1920"/>
+                <img src="4bf13b41b0ab702861902627fa20210e8333e1c4471e3fbe4a9a22b1abd16a18.png" title=" Entonces deber&iacute;a ver el mensaje &quot;Your order has been placed!&quot; (completed)" width="1920"/>
+                <img src="4bf13b41b0ab702861902627fa20210e8333e1c4471e3fbe4a9a22b1abd16a18.png" title=" 1: Compra como invitado ({producto1=iMac, producto2=HTC Touch HD}) (completed): <span class='success-color'>SUCCESS</span>" width="1920"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 3.4.0</span>
+</div>
+</body>
+</html>
