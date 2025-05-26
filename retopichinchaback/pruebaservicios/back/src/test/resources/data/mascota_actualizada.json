@@ -1,0 +1,8 @@
+{
+  "id": 0,
+  "name": "firulais-vendido-uno",
+  "status": "sold",
+  "category": { "id": 1, "name": "perro" },
+  "photoUrls": ["http://fotos.com/firulais.jpg"],
+  "tags": [{ "id": 1, "name": "etiqueta-perro" }]
+}

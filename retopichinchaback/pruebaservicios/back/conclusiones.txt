@@ -1,15 +1,39 @@
-La automatización del flujo de compra en la tienda de demostración OpenCart permite validar de forma confiable
-y repetible uno de los procesos críticos del negocio: el checkout de productos.
-A través de la implementación de una prueba funcional E2E con Serenity BDD y el patrón Screenplay, se logró:
+La automatización del flujo completo sobre la API pública de PetStore Swagger permite validar de forma confiable y repetible las operaciones esenciales sobre el recurso Pet, que representa el núcleo funcional del sistema.
 
-Simular la experiencia completa de un usuario invitado, desde la búsqueda y adición de productos al carrito hasta la confirmación final de la orden.
+Mediante la implementación de una prueba de servicios REST con Karate DSL, se logró:
 
-Validar mensajes clave del proceso, como la confirmación “Your order has been placed!”, asegurando la finalización exitosa de la compra.
+✅ Simular un flujo completo de ciclo de vida de una mascota, que incluye:
 
-Estandarizar el ingreso de datos con modelos y lectura desde archivos CSV, facilitando la escalabilidad y reutilización de pruebas.
+Creación dinámica de la mascota con datos leídos desde archivos JSON externos.
 
-Implementar buenas prácticas de automatización, como separación de responsabilidades, esperas controladas y reutilización de tareas y preguntas.
+Consulta de la mascota recién creada por su ID único.
 
-Esta automatización no solo agiliza la validación del flujo principal de negocio, sino que también sirve como base para construir pruebas más complejas,
-incluyendo flujos con usuarios registrados, promociones, errores esperados, y pruebas de regresión.
-Su integración en pipelines de CI/CD fortalecería aún más la calidad del software entregado.
+Actualización de sus datos (como nombre y estado), validando los cambios correctamente.
+
+Verificación final buscando por estado (sold) y confirmando la existencia de la mascota modificada.
+
+✅ Aplicar buenas prácticas de automatización, como:
+
+Separación clara entre lógica de prueba y datos (archivos *.json en carpeta resources).
+
+Uso de un feature orquestador que garantiza la ejecución ordenada y dependiente de cada paso del flujo.
+
+Persistencia y reutilización de variables clave entre escenarios (petId) sin acoplar pruebas.
+
+✅ Generación de reportes HTML mediante integración con JUnit y ReportBuilder, facilitando la visibilidad de los resultados y su trazabilidad.
+
+⚠️ Limitaciones encontradas:
+
+El servicio PetStore es público y ocasionalmente presenta caídas temporales o respuestas 500, lo que afecta la estabilidad de la ejecución continua del flujo completo.
+
+El endpoint de creación no genera automáticamente un ID nuevo al recibir "id": 0; se optó por fijar el valor o generar uno aleatorio en el código según la necesidad.
+
+🔁 Esta automatización sirve como base para construir pruebas más complejas que incluyan:
+
+Validaciones negativas o con datos erróneos.
+
+Pruebas de carga o concurrencia sobre los endpoints.
+
+Flujo completo con múltiples mascotas u operaciones paralelas.
+
+Además, su integración en pipelines de CI/CD permitiría validar regresiones de forma automática ante cada cambio o despliegue en entornos de prueba.

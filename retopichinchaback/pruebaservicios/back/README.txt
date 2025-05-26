@@ -1,6 +1,6 @@
-# 🧪 Proyecto de Automatización de Pruebas - OpenCart
+# 🧪 Proyecto de Automatización de Pruebas - PetStore API
 
-Este repositorio contiene un proyecto de automatización de pruebas E2E utilizando **Serenity BDD**, **Screenplay Pattern**, **Cucumber** en español y ejecución con **Gradle**.
+Este repositorio contiene un proyecto de automatización de pruebas para la API pública de **PetStore** (https://petstore.swagger.io/) utilizando **Karate DSL** para pruebas REST.
 
 ---
 
@@ -9,9 +9,8 @@ Este repositorio contiene un proyecto de automatización de pruebas E2E utilizan
 ### 1️⃣ Clonar el repositorio
 
 ```bash
-git clone https://github.com/tu_usuario/tu_proyecto.git
-cd tu_proyecto
-```
+git clone https://github.com/tu_usuario/tu_proyecto_petstore.git
+cd tu_proyecto_petstore
 
 ### 2️⃣ Abrir el proyecto en tu IDE
 
@@ -31,18 +30,6 @@ Esto descargará todas las dependencias y compilará el proyecto.
 
 > ⚠️ Asegúrate de tener conexión a Internet para la primera descarga de dependencias.
 
----
-
-## 🧰 Requisitos previos
-
-* Java JDK 11 o superior instalado y configurado (`JAVA_HOME`).
-* Gradle Wrapper (ya incluido en el proyecto).
-* Google Chrome instalado.
-* Descargar [ChromeDriver](https://chromedriver.chromium.org/downloads) y colocarlo en la ruta definida en el proyecto (`Accesos.RUTA_DRIVERS`).
-* Crear la carpeta para descargas en la ruta definida (`Accesos.RUTA_DESCARGAS`).
-
----
-
 ## 💪 Ejecutar pruebas
 
 Puedes ejecutar todos los tests desde terminal con:
@@ -59,30 +46,23 @@ gradlew clean test --tests "*NombreDelRunner*"
 
 ---
 
-## 📄 Datos de prueba desde CSV
+## 📄 Datos de prueba desde json
 
-Este proyecto utiliza archivos CSV como fuente de datos, ubicados en la carpeta:
+Los datos de prueba (ej. cuerpos JSON para las mascotas) se encuentran en:
 
 ```
 src/test/resources/data/
 ```
 
-Formato esperado:
-
-* El nombre del archivo debe comenzar con `datos_`.
-* Debe incluir una columna llamada `idFiltro` para filtrar los datos.
-
----
-
 ## 📋 Reportes
 
-Al finalizar la ejecución, Serenity genera un reporte HTML:
+Al finalizar la ejecución, Karate genera reportes HTML en:
 
 ```
-build/reports/serenity/index.html
+build/karate-reports/
 ```
 
-Puedes abrirlo con cualquier navegador para ver resultados detallados.
+Abre karate-summary.html con cualquier navegador para ver el resumen y detalles.
 
 ---
 
@@ -92,31 +72,29 @@ Puedes abrirlo con cualquier navegador para ver resultados detallados.
 src
  └── test
      ├── java
-     │    └── co.com.opencart
-     │         ├── stepdefinitions/
-     │         ├── tasks/
-     │         ├── models/
-     │         ├── questions/
-     │         └── utils/
+     │    └── mascotas
+     │         ├── ParallelTest.java
+     │         └── runners y demás clases Java si aplica
      └── resources
-          ├── features/
-          ├── data/
-          └── log4j.properties
-```
-
+          ├── mascotas
+          │    ├── 1_crear_mascota.feature
+          │    ├── 2_consultar_mascota.feature
+          │    ├── 3_actualizar_mascota.feature
+          │    └── 4_consultar_por_status.feature
+          ├── data
+          │    ├── mascota_nueva.json
+          │    └── mascota_actualizada.json
+          └── karate-config.js
 ---
 
 ## ✅ Tecnologías usadas
 
-* Serenity BDD
-* Cucumber (español)
-* Screenplay Pattern
-* Gradle
-* Java 11
-* Selenium WebDriver
-* Log4j
-* CSV como fuente de datos
-
+Karate DSL para pruebas REST
+Cucumber para definición de escenarios
+Java 11
+Gradle para build y ejecución
+JSON para datos de prueba
+Reportes HTML automáticos generados por Karate
 ---
 
 ## ❓ ¿Preguntas?
